@@ -8,7 +8,7 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>AEE42BC5-C485-48F9-B7C9-ADC699C48192</key>
+		<key>7ACB2359-6F83-479A-815C-6D74C152EF73</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -36,7 +36,7 @@
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>hotkey</key>
 				<integer>31</integer>
 				<key>hotmod</key>
@@ -53,7 +53,7 @@
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>AEE42BC5-C485-48F9-B7C9-ADC699C48192</string>
+			<string>7ACB2359-6F83-479A-815C-6D74C152EF73</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -63,13 +63,13 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>66</integer>
 				<key>keyword</key>
 				<string>lala</string>
 				<key>runningsubtext</key>
 				<string>Boop</string>
 				<key>script</key>
-				<string>python script.py main</string>
+				<string>python script.py add "{query}"</string>
 				<key>subtext</key>
 				<string>W00t</string>
 				<key>title</key>
@@ -77,7 +77,7 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -94,9 +94,9 @@
 		<key>248B9D33-1191-4AC4-9694-F0B632E3E154</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>170</real>
 		</dict>
-		<key>AEE42BC5-C485-48F9-B7C9-ADC699C48192</key>
+		<key>7ACB2359-6F83-479A-815C-6D74C152EF73</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
