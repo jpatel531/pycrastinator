@@ -8,11 +8,46 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>172CCA15-AD78-4742-AF1A-7A258D05CCA2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ABD67D9C-BF42-4784-9AAF-A12D2E2E19E6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>248B9D33-1191-4AC4-9694-F0B632E3E154</key>
+		<array/>
+		<key>36FE9E23-E957-44C9-9461-2EE34D14CBE4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CC8A6305-75AA-48A1-AF51-C3EC51BAAE62</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>68BD0593-9064-4F8E-A2F5-107E74C56682</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>172CCA15-AD78-4742-AF1A-7A258D05CCA2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>7ACB2359-6F83-479A-815C-6D74C152EF73</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>248B9D33-1191-4AC4-9694-F0B632E3E154</string>
+				<string>36FE9E23-E957-44C9-9461-2EE34D14CBE4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -30,6 +65,35 @@
 	<string>Pycrastinator</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>66</integer>
+				<key>keyword</key>
+				<string>add</string>
+				<key>runningsubtext</key>
+				<string>Boop</string>
+				<key>script</key>
+				<string>python script.py add "{query}"</string>
+				<key>subtext</key>
+				<string>W00t</string>
+				<key>title</key>
+				<string>Blabla</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>248B9D33-1191-4AC4-9694-F0B632E3E154</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -60,20 +124,77 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>python script.py add "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CC8A6305-75AA-48A1-AF51-C3EC51BAAE62</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>34</integer>
+				<key>hotmod</key>
+				<integer>524288</integer>
+				<key>hotstring</key>
+				<string>I</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>68BD0593-9064-4F8E-A2F5-107E74C56682</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>ABD67D9C-BF42-4784-9AAF-A12D2E2E19E6</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>66</integer>
+				<integer>127</integer>
 				<key>keyword</key>
-				<string>lala</string>
-				<key>runningsubtext</key>
-				<string>Boop</string>
+				<string>confirm</string>
 				<key>script</key>
-				<string>python script.py add "{query}"</string>
-				<key>subtext</key>
-				<string>W00t</string>
+				<string>python script.py confirm "{query}"</string>
 				<key>title</key>
-				<string>Blabla</string>
+				<string>Confirm Selection</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -82,7 +203,32 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>248B9D33-1191-4AC4-9694-F0B632E3E154</string>
+			<string>36FE9E23-E957-44C9-9461-2EE34D14CBE4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>links</string>
+				<key>script</key>
+				<string>python script.py main</string>
+				<key>title</key>
+				<string>Show Links</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>172CCA15-AD78-4742-AF1A-7A258D05CCA2</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -91,15 +237,40 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>172CCA15-AD78-4742-AF1A-7A258D05CCA2</key>
+		<dict>
+			<key>ypos</key>
+			<real>430</real>
+		</dict>
 		<key>248B9D33-1191-4AC4-9694-F0B632E3E154</key>
 		<dict>
 			<key>ypos</key>
-			<real>170</real>
+			<real>10</real>
+		</dict>
+		<key>36FE9E23-E957-44C9-9461-2EE34D14CBE4</key>
+		<dict>
+			<key>ypos</key>
+			<real>240</real>
+		</dict>
+		<key>68BD0593-9064-4F8E-A2F5-107E74C56682</key>
+		<dict>
+			<key>ypos</key>
+			<real>200</real>
 		</dict>
 		<key>7ACB2359-6F83-479A-815C-6D74C152EF73</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>20</real>
+		</dict>
+		<key>ABD67D9C-BF42-4784-9AAF-A12D2E2E19E6</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>CC8A6305-75AA-48A1-AF51-C3EC51BAAE62</key>
+		<dict>
+			<key>ypos</key>
+			<real>30</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
