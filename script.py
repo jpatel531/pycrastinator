@@ -2,6 +2,7 @@
 # encoding: utf-8
 import json
 import sys
+import math
 from workflow import Workflow, web
 
 
@@ -11,7 +12,7 @@ def main(wf):
 	for link in links:
 		wf.add_item(
 			title=link['title'], 
-			subtitle=link['word_count'], 
+			subtitle=link['time_to_read'], 
 			arg=link['link'], 
 			valid= True, 
 			icon=link['icon'])
@@ -25,23 +26,30 @@ def get_link_data(link):
 def confirm(wf):
 	link = wf.args[1]
 
-	link_data = get_link_data(link)
-	title = link_data.get('title')
-	word_count = str(link_data.get('word_count'))
-	icon = link_data.get('lead_image_url')
+	try:
+		link_data = get_link_data(link)
+		title = link_data.get('title')
+		word_count = link_data.get('word_count')
+		icon = link_data.get('lead_image_url')
 
-	data = {'link': link, 'title': title, 'word_count': word_count, 'icon': icon}
+		time_length = int(math.ceil(word_count / 300))
 
-	json_data = json.dumps(data)
+		time_to_read = '%s mins read' % time_length
 
-	wf.add_item(
-		title=title, 
-		subtitle=word_count, 
-		arg=json_data,
-		valid=True,
-		icon=icon)
+		data = {'link': link, 'title': title, 'word_count': word_count, 'icon': icon, 'time_to_read': time_to_read}
 
-	wf.send_feedback()
+		json_data = json.dumps(data)
+
+		wf.add_item(
+			title=title, 
+			subtitle=time_to_read, 
+			arg=json_data,
+			valid=True,
+			icon=icon)
+
+		wf.send_feedback()
+	except:
+		pass
 
 def add(wf):
 	data = wf.args[1]
