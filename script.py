@@ -56,6 +56,13 @@ def add(wf):
 	wf.add_item(title, word_count, icon)
 	wf.send_feedback()
 
+def remove(wf):
+	link = wf.args[1]
+	data = wf.stored_data('pycrastinator')
+	data = [item for item in data if item['link'] != link]
+	wf.store_data('pycrastinator', data)
+
+
 if __name__ == '__main__':
 	wf = Workflow()
 	wf.data_serializer = 'json'
@@ -72,5 +79,9 @@ if __name__ == '__main__':
 
 	elif command == 'open':
 		raise Exception(args[1])
+
+	elif command == 'remove':
+		sys.exit(wf.run(remove))
+
 	else:	
 		sys.exit(wf.run(main))
