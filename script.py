@@ -6,6 +6,9 @@ from workflow import Workflow, web
 
 def main(wf):
 	links = wf.stored_data('pycrastinator')
+
+	links.sort(key=lambda link: link['time_to_read'])
+
 	for link in links:
 		wf.add_item(
 			title=link['title'], 
@@ -29,7 +32,7 @@ def confirm(wf):
 		word_count = link_data.get('word_count')
 		icon = link_data.get('lead_image_url')
 
-		time_length = int(math.ceil(word_count / 300.00))
+		time_length = int(math.ceil(word_count / 220.00))
 
 		time_to_read = '%s mins read' % time_length
 
