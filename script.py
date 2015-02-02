@@ -1,10 +1,8 @@
 #!/usr/bin/python
 # encoding: utf-8
-import json
-import sys
-import math
-from workflow import Workflow, web
 
+import json, sys, math
+from workflow import Workflow, web
 
 def main(wf):
 	links = wf.stored_data('pycrastinator')
@@ -60,9 +58,6 @@ def add(wf):
 
 	wf.store_data('pycrastinator', store_data)
 
-	# wf.run(main)
-	# wf.main()
-
 	wf.add_item(title=data['title'], subtitle=data['time_to_read'], arg=data['title'], valid=True)
 	wf.send_feedback()
 
@@ -86,9 +81,6 @@ if __name__ == '__main__':
 
 	elif command == 'confirm':
 		sys.exit(wf.run(confirm))
-
-	elif command == 'open':
-		raise Exception(args[1])
 
 	elif command == 'remove':
 		sys.exit(wf.run(remove))
