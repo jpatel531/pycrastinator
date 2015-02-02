@@ -7,7 +7,6 @@ from workflow import Workflow, web
 
 
 def main(wf):
-
 	links = wf.stored_data('pycrastinator')
 	for link in links:
 		wf.add_item(
@@ -32,7 +31,7 @@ def confirm(wf):
 		word_count = link_data.get('word_count')
 		icon = link_data.get('lead_image_url')
 
-		time_length = int(math.ceil(word_count / 300))
+		time_length = int(math.ceil(word_count / 300.00))
 
 		time_to_read = '%s mins read' % time_length
 
@@ -61,7 +60,10 @@ def add(wf):
 
 	wf.store_data('pycrastinator', store_data)
 
-	wf.add_item(title, word_count, icon)
+	# wf.run(main)
+	# wf.main()
+
+	wf.add_item(title=data['title'], subtitle=data['time_to_read'], arg=data['title'], valid=True)
 	wf.send_feedback()
 
 def remove(wf):

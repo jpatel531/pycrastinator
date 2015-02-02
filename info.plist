@@ -61,10 +61,30 @@
 			</dict>
 		</array>
 		<key>CC8A6305-75AA-48A1-AF51-C3EC51BAAE62</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1BDEEE6-A382-4979-83F0-3BC5939D8EAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>CCF5B3A4-8511-4D0E-9DD2-C8291AA434AB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1BDEEE6-A382-4979-83F0-3BC5939D8EAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Jamie Patel</string>
 	<key>description</key>
 	<string>Bookmark Manager On Crack</string>
 	<key>disabled</key>
@@ -73,6 +93,31 @@
 	<string>Pycrastinator</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>confirm</string>
+				<key>script</key>
+				<string>python script.py confirm "{query}"</string>
+				<key>title</key>
+				<string>Confirm Selection</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>36FE9E23-E957-44C9-9461-2EE34D14CBE4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -120,25 +165,34 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
 				<key>escaping</key>
 				<integer>127</integer>
-				<key>keyword</key>
-				<string>confirm</string>
 				<key>script</key>
-				<string>python script.py confirm "{query}"</string>
-				<key>title</key>
-				<string>Confirm Selection</string>
+				<string>tell application "Alfred 2" to search "links"</string>
 				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>C1BDEEE6-A382-4979-83F0-3BC5939D8EAB</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>36FE9E23-E957-44C9-9461-2EE34D14CBE4</string>
+			<string>ABD67D9C-BF42-4784-9AAF-A12D2E2E19E6</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -168,23 +222,6 @@
 			<string>68BD0593-9064-4F8E-A2F5-107E74C56682</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>plusspaces</key>
-				<false/>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>ABD67D9C-BF42-4784-9AAF-A12D2E2E19E6</string>
-			<key>version</key>
-			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -241,7 +278,7 @@
 		<key>36FE9E23-E957-44C9-9461-2EE34D14CBE4</key>
 		<dict>
 			<key>ypos</key>
-			<real>30</real>
+			<real>10</real>
 		</dict>
 		<key>68BD0593-9064-4F8E-A2F5-107E74C56682</key>
 		<dict>
@@ -256,7 +293,12 @@
 		<key>ABD67D9C-BF42-4784-9AAF-A12D2E2E19E6</key>
 		<dict>
 			<key>ypos</key>
-			<real>220</real>
+			<real>160</real>
+		</dict>
+		<key>C1BDEEE6-A382-4979-83F0-3BC5939D8EAB</key>
+		<dict>
+			<key>ypos</key>
+			<real>160</real>
 		</dict>
 		<key>CC8A6305-75AA-48A1-AF51-C3EC51BAAE62</key>
 		<dict>
